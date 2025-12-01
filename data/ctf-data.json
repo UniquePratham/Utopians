@@ -1,0 +1,122 @@
+[
+  {
+    "event": "Pointer Overflow CTF - 2025",
+    "place": 28,
+    "points": 9600.0,
+    "logo": "pointer-overflow-ctf-2025.png"
+  },
+  {
+    "event": "Haix-la-Chapelle 2025",
+    "place": 33,
+    "points": 300.0,
+    "logo": "haix-la-chapelle-2025.png"
+  },
+  {
+    "event": "Guardians of the TI",
+    "place": 36,
+    "points": 350.0,
+    "logo": "guardians-of-the-ti.png"
+  },
+  {
+    "event": "Haunted Pumpkin CTF '25",
+    "place": 56,
+    "points": 3258.0,
+    "logo": "haunted-pumpkin-ctf-25.png"
+  },
+  {
+    "event": "M*CTF 2025 Junior Quals",
+    "place": 59,
+    "points": 2873.0,
+    "logo": "mctf-2025-junior-quals.png"
+  },
+  {
+    "event": "jailCTF 2025",
+    "place": 65,
+    "points": 305.0,
+    "logo": "jailctf-2025.png"
+  },
+  {
+    "event": "sknbCTF 2025",
+    "place": 82,
+    "points": 600.0,
+    "logo": "sknbctf-2025.png"
+  },
+  {
+    "event": "saarCTF 2025",
+    "place": 97,
+    "points": 11490.14,
+    "logo": "saarctf-2025.png"
+  },
+  {
+    "event": "Platypwn 2025",
+    "place": 129,
+    "points": 400.0,
+    "logo": "platypwn-2025.png"
+  },
+  {
+    "event": "HeroCTF v7",
+    "place": 146,
+    "points": 1602.0,
+    "logo": "heroctf-v7.png"
+  },
+  {
+    "event": "Crate-CTF 2025",
+    "place": 156,
+    "points": 1147.0,
+    "logo": "crate-ctf-2025.png"
+  },
+  {
+    "event": "DEADFACE CTF 2025",
+    "place": 157,
+    "points": 2506.0,
+    "logo": "deadface-ctf-2025.png"
+  },
+  {
+    "event": "GlacierCTF 2025",
+    "place": 158,
+    "points": 350.0,
+    "logo": "glacierctf-2025.png"
+  },
+  {
+    "event": "EnigmaXplore 3.0",
+    "place": 187,
+    "points": 250.0,
+    "logo": "enigmaxplore-3.png"
+  },
+  {
+    "event": "PwnSec CTF 2025",
+    "place": 257,
+    "points": 200.0,
+    "logo": "pwnsec-ctf-2025.png"
+  },
+  {
+    "event": "AmateursCTF 2025",
+    "place": 266,
+    "points": 110.0,
+    "logo": "amateursctf-2025.png"
+  },
+  {
+    "event": "BuckeyeCTF 2025",
+    "place": 327,
+    "points": 400.0,
+    "logo": "buckeyectf-2025.png"
+  },
+  {
+    "event": "PatriotCTF 2025",
+    "place": 350,
+    "points": 2150.0,
+    "logo": "patriotctf-2025.png"
+  },
+  {
+    "event": "V1t CTF 2025",
+    "place": 410,
+    "points": 1060.0,
+    "logo": "v1t-ctf-2025.png"
+  },
+  {
+    "event": "SunshineCTF 2025",
+    "place": 918,
+    "points": 33.0,
+    "logo": "sunshinectf-2025.png"
+  }
+]
