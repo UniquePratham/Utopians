@@ -61,3 +61,7 @@ next-env.d.ts
 .Spotlight-V100
 .Trashes
 ehthumbs.db
+
+# Added by repo hygiene pass
+__pycache__/
+node_modules/
