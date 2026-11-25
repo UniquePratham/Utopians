@@ -1,0 +1,43 @@
+name: Sync CTFtime stats
+
+# Keeps data/ctf-data.json in step with the team's CTFtime page, so the site's
+# numbers are never stale and nobody has to edit them by hand.
+#
+# Runs daily, and can be triggered manually from the Actions tab.
+
+on:
+  schedule:
+    # 06:17 UTC every day — off the hour so it does not queue behind the
+    # thousands of jobs that fire at :00.
+    - cron: "17 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Fetch CTFtime stats
+        run: node scripts/sync-ctftime.mjs
+
+      - name: Commit if changed
+        run: |
+          if git diff --quiet -- data/; then
+            echo "No change — nothing to commit"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/
+          git commit -m "chore: sync CTFtime stats
+
+          Automated update from https://ctftime.org/team/408650"
+          git push

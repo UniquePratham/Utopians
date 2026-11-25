@@ -1,122 +1,842 @@
 [
   {
+    "event": "Hack for a Change 2026 May: UN SDG 1",
+    "place": 21,
+    "points": 3950,
+    "ratingPoints": 25.698,
+    "eventId": 3277,
+    "year": 2026
+  },
+  {
+    "event": "RAMunchers CTF",
+    "place": 31,
+    "points": 1112,
+    "ratingPoints": 8.244,
+    "eventId": 3283,
+    "year": 2026
+  },
+  {
+    "event": "PUTCyberDays CTF 2026",
+    "place": 33,
+    "points": 3010,
+    "ratingPoints": 14.599,
+    "eventId": 3202,
+    "year": 2026
+  },
+  {
+    "event": "Hack for a Change 2026 March: UN SDG 3",
+    "place": 36,
+    "points": 2950,
+    "ratingPoints": 21.4,
+    "eventId": 3184,
+    "year": 2026
+  },
+  {
+    "event": "Mimic",
+    "place": 43,
+    "points": 1650,
+    "ratingPoints": 0,
+    "eventId": 3455,
+    "year": 2026
+  },
+  {
+    "event": "DEADFACE CTF 2026",
+    "place": 49,
+    "points": 9482,
+    "ratingPoints": 28.752,
+    "eventId": 3279,
+    "year": 2026
+  },
+  {
+    "event": "RIFFHACK: Black Market Break-In",
+    "place": 50,
+    "points": 4360,
+    "ratingPoints": 0,
+    "eventId": 3297,
+    "year": 2026
+  },
+  {
+    "event": "HASBLCTF26",
+    "place": 51,
+    "points": 4600,
+    "ratingPoints": 14.601,
+    "eventId": 3301,
+    "year": 2026
+  },
+  {
+    "event": "H7CTF 2026 Quals",
+    "place": 57,
+    "points": 7107,
+    "ratingPoints": 20.465,
+    "eventId": 3093,
+    "year": 2026
+  },
+  {
+    "event": "0xV01D CTF 2026",
+    "place": 61,
+    "points": 4393,
+    "ratingPoints": 9.479,
+    "eventId": 3269,
+    "year": 2026
+  },
+  {
+    "event": "RITSEC CTF 2026",
+    "place": 64,
+    "points": 1754,
+    "ratingPoints": 13.942,
+    "eventId": 3096,
+    "year": 2026
+  },
+  {
+    "event": "Sieberrsec CTF 7.0",
+    "place": 66,
+    "points": 2035,
+    "ratingPoints": 4.241,
+    "eventId": 3299,
+    "year": 2026
+  },
+  {
+    "event": "BYUCTF 2026",
+    "place": 66,
+    "points": 6253,
+    "ratingPoints": 30.03,
+    "eventId": 3247,
+    "year": 2026
+  },
+  {
+    "event": "Outback Overflow",
+    "place": 71,
+    "points": 2750,
+    "ratingPoints": 0,
+    "eventId": 3425,
+    "year": 2026
+  },
+  {
+    "event": "RedShift.ZeroPlusCTF-3",
+    "place": 72,
+    "points": 13384,
+    "ratingPoints": 12.207,
+    "eventId": 3191,
+    "year": 2026
+  },
+  {
+    "event": "DalCTF 2026",
+    "place": 93,
+    "points": 1476,
+    "ratingPoints": 4.256,
+    "eventId": 3320,
+    "year": 2026
+  },
+  {
+    "event": "PsychCTF 2026",
+    "place": 93,
+    "points": 842,
+    "ratingPoints": 3.808,
+    "eventId": 3166,
+    "year": 2026
+  },
+  {
+    "event": "Hackअस्त्र",
+    "place": 95,
+    "points": 1500,
+    "ratingPoints": 4.422,
+    "eventId": 3270,
+    "year": 2026
+  },
+  {
+    "event": "Kashi CTF 2026",
+    "place": 96,
+    "points": 2410,
+    "ratingPoints": 7.189,
+    "eventId": 3150,
+    "year": 2026
+  },
+  {
+    "event": "TexSAW 2026",
+    "place": 124,
+    "points": 1501,
+    "ratingPoints": 11.86,
+    "eventId": 3130,
+    "year": 2026
+  },
+  {
+    "event": "CTF@AC26 - Quals",
+    "place": 140,
+    "points": 100,
+    "ratingPoints": 0.907,
+    "eventId": 3192,
+    "year": 2026
+  },
+  {
+    "event": "boroCTF 2026",
+    "place": 147,
+    "points": 8900,
+    "ratingPoints": 12.132,
+    "eventId": 3309,
+    "year": 2026
+  },
+  {
+    "event": "CTF@CIT 2026",
+    "place": 148,
+    "points": 15142,
+    "ratingPoints": 7.939,
+    "eventId": 3156,
+    "year": 2026
+  },
+  {
+    "event": "LUN4R CTF Quals",
+    "place": 156,
+    "points": 810,
+    "ratingPoints": 6.427,
+    "eventId": 3435,
+    "year": 2026
+  },
+  {
+    "event": "0xL4ugh CTF v5",
+    "place": 157,
+    "points": 250,
+    "ratingPoints": 1.027,
+    "eventId": 3024,
+    "year": 2026
+  },
+  {
+    "event": "Scarlet CTF 2026",
+    "place": 165,
+    "points": 1586,
+    "ratingPoints": 3.209,
+    "eventId": 2981,
+    "year": 2026
+  },
+  {
+    "event": "z0d1ak CTF Qualifiers",
+    "place": 166,
+    "points": 664,
+    "ratingPoints": 1.74,
+    "eventId": 3370,
+    "year": 2026
+  },
+  {
+    "event": "WolvCTF 2026",
+    "place": 183,
+    "points": 2050,
+    "ratingPoints": 0,
+    "eventId": 3049,
+    "year": 2026
+  },
+  {
+    "event": "NDIAS Automotive/IoT CTF",
+    "place": 188,
+    "points": 310,
+    "ratingPoints": 1.576,
+    "eventId": 3276,
+    "year": 2026
+  },
+  {
+    "event": "GPN CTF 2026",
+    "place": 192,
+    "points": 419,
+    "ratingPoints": 6.739,
+    "eventId": 3041,
+    "year": 2026
+  },
+  {
+    "event": "Anti-Slop CTF 2026",
+    "place": 202,
+    "points": 302,
+    "ratingPoints": 1.314,
+    "eventId": 3272,
+    "year": 2026
+  },
+  {
+    "event": "RSTCON 2026 CTF",
+    "place": 211,
+    "points": 110,
+    "ratingPoints": 0.824,
+    "eventId": 3377,
+    "year": 2026
+  },
+  {
+    "event": "NCTF 2026",
+    "place": 216,
+    "points": 1000,
+    "ratingPoints": 4.778,
+    "eventId": 3206,
+    "year": 2026
+  },
+  {
+    "event": "CSCTF 2026",
+    "place": 217,
+    "points": 10016,
+    "ratingPoints": 8.229,
+    "eventId": 3333,
+    "year": 2026
+  },
+  {
+    "event": "DiceCTF 2026 Quals",
+    "place": 217,
+    "points": 546,
+    "ratingPoints": 20.542,
+    "eventId": 3110,
+    "year": 2026
+  },
+  {
+    "event": "upCTF 2026",
+    "place": 222,
+    "points": 200,
+    "ratingPoints": 1.09,
+    "eventId": 3073,
+    "year": 2026
+  },
+  {
+    "event": "UTCTF 2026",
+    "place": 223,
+    "points": 3517,
+    "ratingPoints": 18.972,
+    "eventId": 3133,
+    "year": 2026
+  },
+  {
+    "event": "TraceBash CTF 2026",
+    "place": 235,
+    "points": 1000,
+    "ratingPoints": 4.169,
+    "eventId": 3323,
+    "year": 2026
+  },
+  {
+    "event": "BKISC CTF 2026",
+    "place": 239,
+    "points": 100,
+    "ratingPoints": 0.295,
+    "eventId": 2927,
+    "year": 2026
+  },
+  {
+    "event": "PINK+ CTF 2026",
+    "place": 242,
+    "points": 310,
+    "ratingPoints": 3.684,
+    "eventId": 3331,
+    "year": 2026
+  },
+  {
+    "event": "Break The Syntax CTF 2026",
+    "place": 252,
+    "points": 50,
+    "ratingPoints": 0.641,
+    "eventId": 3137,
+    "year": 2026
+  },
+  {
+    "event": "b01lers CTF 2026",
+    "place": 252,
+    "points": 317,
+    "ratingPoints": 2.083,
+    "eventId": 3153,
+    "year": 2026
+  },
+  {
+    "event": "New Year CTF 2026",
+    "place": 257,
+    "points": 400,
+    "ratingPoints": 0.902,
+    "eventId": 3021,
+    "year": 2026
+  },
+  {
+    "event": "SAS CTF 2026 Quals",
+    "place": 275,
+    "points": 50,
+    "ratingPoints": 0.467,
+    "eventId": 3109,
+    "year": 2026
+  },
+  {
+    "event": "KalmarCTF 2026",
+    "place": 281,
+    "points": 100,
+    "ratingPoints": 0.89,
+    "eventId": 2983,
+    "year": 2026
+  },
+  {
+    "event": "VolgaCTF 2026 Qualifier",
+    "place": 291,
+    "points": 100,
+    "ratingPoints": 1.921,
+    "eventId": 3045,
+    "year": 2026
+  },
+  {
+    "event": "h4ckc0n 2026",
+    "place": 292,
+    "points": 1100,
+    "ratingPoints": 3.59,
+    "eventId": 3464,
+    "year": 2026
+  },
+  {
+    "event": "UMDCTF 2026",
+    "place": 295,
+    "points": 251,
+    "ratingPoints": 5.541,
+    "eventId": 3056,
+    "year": 2026
+  },
+  {
+    "event": "HI Cyber Con 2026 CTF",
+    "place": 301,
+    "points": 1642,
+    "ratingPoints": 8.047,
+    "eventId": 3460,
+    "year": 2026
+  },
+  {
+    "event": "GlacierCTF 2026",
+    "place": 306,
+    "points": 250,
+    "ratingPoints": 8.799,
+    "eventId": 3337,
+    "year": 2026
+  },
+  {
+    "event": "THCon 2K26 CTF",
+    "place": 311,
+    "points": 250,
+    "ratingPoints": 1.07,
+    "eventId": 3186,
+    "year": 2026
+  },
+  {
+    "event": "DawgCTF 2026",
+    "place": 314,
+    "points": 1460,
+    "ratingPoints": 8.084,
+    "eventId": 3102,
+    "year": 2026
+  },
+  {
+    "event": "BlueHens CTF 2026",
+    "place": 315,
+    "points": 10,
+    "ratingPoints": 0.121,
+    "eventId": 3235,
+    "year": 2026
+  },
+  {
+    "event": "Midnight Flag CTF - EXECUTION",
+    "place": 337,
+    "points": 300,
+    "ratingPoints": 1.71,
+    "eventId": 3105,
+    "year": 2026
+  },
+  {
+    "event": "cruXipher 2026 - ATMoS '26, BITS Hyderabad",
+    "place": 338,
+    "points": 50,
+    "ratingPoints": 0.583,
+    "eventId": 3369,
+    "year": 2026
+  },
+  {
+    "event": "TJCTF 2026",
+    "place": 339,
+    "points": 1691,
+    "ratingPoints": 7.299,
+    "eventId": 3195,
+    "year": 2026
+  },
+  {
+    "event": "EHAX CTF 2026",
+    "place": 371,
+    "points": 298,
+    "ratingPoints": 0.8,
+    "eventId": 3127,
+    "year": 2026
+  },
+  {
+    "event": "KubSTU CTF",
+    "place": 408,
+    "points": 1293,
+    "ratingPoints": 1,
+    "eventId": 3177,
+    "year": 2026
+  },
+  {
+    "event": "CSS CTF 2026: Return of Nexus",
+    "place": 485,
+    "points": 215,
+    "ratingPoints": 2.575,
+    "eventId": 3434,
+    "year": 2026
+  },
+  {
+    "event": "Midnight Sun CTF 2026 Quals",
+    "place": 494,
+    "points": 91,
+    "ratingPoints": 1.238,
+    "eventId": 2773,
+    "year": 2026
+  },
+  {
+    "event": "TRX CTF 2026",
+    "place": 505,
+    "points": 1,
+    "ratingPoints": 0.052,
+    "eventId": 3141,
+    "year": 2026
+  },
+  {
+    "event": "SecLeaf Q2 CTF 2026",
+    "place": 519,
+    "points": 1404,
+    "ratingPoints": 0,
+    "eventId": 3136,
+    "year": 2026
+  },
+  {
+    "event": "V1T CTF 2026",
+    "place": 520,
+    "points": 131,
+    "ratingPoints": 0.286,
+    "eventId": 3249,
+    "year": 2026
+  },
+  {
+    "event": "LYKNCTF",
+    "place": 536,
+    "points": 3,
+    "ratingPoints": 0.053,
+    "eventId": 3280,
+    "year": 2026
+  },
+  {
+    "event": "TAMUctf 2026",
+    "place": 662,
+    "points": 1,
+    "ratingPoints": 0.153,
+    "eventId": 3095,
+    "year": 2026
+  },
+  {
+    "event": "NullOrigin CTF Qualifiers",
+    "place": 687,
+    "points": 360,
+    "ratingPoints": 0.527,
+    "eventId": 3346,
+    "year": 2026
+  },
+  {
+    "event": "Pragyan CTF 2026",
+    "place": 711,
+    "points": 50,
+    "ratingPoints": 0.016,
+    "eventId": 3058,
+    "year": 2026
+  },
+  {
+    "event": "SekaiCTF 2026",
+    "place": 835,
+    "points": 39,
+    "ratingPoints": 0.99,
+    "eventId": 3113,
+    "year": 2026
+  },
+  {
+    "event": "ApoorvCTF 2026",
+    "place": 848,
+    "points": 29,
+    "ratingPoints": 0.052,
+    "eventId": 3171,
+    "year": 2026
+  },
+  {
+    "event": "0xFUN CTF 2026",
+    "place": 1025,
+    "points": 51,
+    "ratingPoints": 0.064,
+    "eventId": 3081,
+    "year": 2026
+  },
+  {
+    "event": "UofTCTF 2026",
+    "place": 1146,
+    "points": 31,
+    "ratingPoints": 0.246,
+    "eventId": 2969,
+    "year": 2026
+  },
+  {
     "event": "Pointer Overflow CTF - 2025",
     "place": 28,
-    "points": 9600.0,
-    "logo": "pointer-overflow-ctf-2025.png"
+    "points": 9600,
+    "ratingPoints": 0,
+    "eventId": 2904,
+    "year": 2025
   },
   {
     "event": "Haix-la-Chapelle 2025",
     "place": 33,
-    "points": 300.0,
-    "logo": "haix-la-chapelle-2025.png"
+    "points": 300,
+    "ratingPoints": 3.002,
+    "eventId": 2951,
+    "year": 2025
   },
   {
     "event": "Guardians of the TI",
     "place": 36,
-    "points": 350.0,
-    "logo": "guardians-of-the-ti.png"
+    "points": 350,
+    "ratingPoints": 0,
+    "eventId": 3006,
+    "year": 2025
+  },
+  {
+    "event": "VuwCTF 2025",
+    "place": 37,
+    "points": 956,
+    "ratingPoints": 3.548,
+    "eventId": 3012,
+    "year": 2025
+  },
+  {
+    "event": "Metared Argentina 2025",
+    "place": 37,
+    "points": 3559,
+    "ratingPoints": 0,
+    "eventId": 3003,
+    "year": 2025
   },
   {
     "event": "Haunted Pumpkin CTF '25",
     "place": 56,
-    "points": 3258.0,
-    "logo": "haunted-pumpkin-ctf-25.png"
+    "points": 3258,
+    "ratingPoints": 0,
+    "eventId": 2918,
+    "year": 2025
   },
   {
     "event": "M*CTF 2025 Junior Quals",
     "place": 59,
-    "points": 2873.0,
-    "logo": "mctf-2025-junior-quals.png"
+    "points": 2873,
+    "ratingPoints": 2.208,
+    "eventId": 2995,
+    "year": 2025
   },
   {
     "event": "jailCTF 2025",
     "place": 65,
-    "points": 305.0,
-    "logo": "jailctf-2025.png"
+    "points": 305,
+    "ratingPoints": 0.873,
+    "eventId": 2737,
+    "year": 2025
+  },
+  {
+    "event": "P3rf3ctr00t CTF 2025",
+    "place": 66,
+    "points": 2765,
+    "ratingPoints": 5.8,
+    "eventId": 3009,
+    "year": 2025
   },
   {
     "event": "sknbCTF 2025",
     "place": 82,
-    "points": 600.0,
-    "logo": "sknbctf-2025.png"
+    "points": 600,
+    "ratingPoints": 3.623,
+    "eventId": 2947,
+    "year": 2025
+  },
+  {
+    "event": "CyKor CTF 2025",
+    "place": 85,
+    "points": 100,
+    "ratingPoints": 0.624,
+    "eventId": 3028,
+    "year": 2025
   },
   {
     "event": "saarCTF 2025",
     "place": 97,
-    "points": 11490.14,
-    "logo": "saarctf-2025.png"
+    "points": 11490.1382,
+    "ratingPoints": 6.735,
+    "eventId": 2859,
+    "year": 2025
   },
   {
     "event": "Platypwn 2025",
     "place": 129,
-    "points": 400.0,
-    "logo": "platypwn-2025.png"
+    "points": 400,
+    "ratingPoints": 1.18,
+    "eventId": 2606,
+    "year": 2025
+  },
+  {
+    "event": "Null CTF 2025",
+    "place": 134,
+    "points": 680,
+    "ratingPoints": 1.347,
+    "eventId": 2901,
+    "year": 2025
+  },
+  {
+    "event": "WannaGame Championship 2025",
+    "place": 137,
+    "points": 600,
+    "ratingPoints": 1.021,
+    "eventId": 2898,
+    "year": 2025
   },
   {
     "event": "HeroCTF v7",
     "place": 146,
-    "points": 1602.0,
-    "logo": "heroctf-v7.png"
+    "points": 1602,
+    "ratingPoints": 8.658,
+    "eventId": 2869,
+    "year": 2025
+  },
+  {
+    "event": "BackdoorCTF 2025",
+    "place": 148,
+    "points": 1000,
+    "ratingPoints": 11.026,
+    "eventId": 2915,
+    "year": 2025
   },
   {
     "event": "Crate-CTF 2025",
     "place": 156,
-    "points": 1147.0,
-    "logo": "crate-ctf-2025.png"
+    "points": 1147,
+    "ratingPoints": 1.851,
+    "eventId": 2838,
+    "year": 2025
   },
   {
     "event": "DEADFACE CTF 2025",
     "place": 157,
-    "points": 2506.0,
-    "logo": "deadface-ctf-2025.png"
+    "points": 2506,
+    "ratingPoints": 9.21,
+    "eventId": 2912,
+    "year": 2025
   },
   {
     "event": "GlacierCTF 2025",
     "place": 158,
-    "points": 350.0,
-    "logo": "glacierctf-2025.png"
+    "points": 350,
+    "ratingPoints": 2.685,
+    "eventId": 2714,
+    "year": 2025
   },
   {
     "event": "EnigmaXplore 3.0",
     "place": 187,
-    "points": 250.0,
-    "logo": "enigmaxplore-3.png"
+    "points": 250,
+    "ratingPoints": 2.407,
+    "eventId": 2957,
+    "year": 2025
+  },
+  {
+    "event": "Infobahn CTF 2025",
+    "place": 197,
+    "points": 500,
+    "ratingPoints": 1.776,
+    "eventId": 2878,
+    "year": 2025
+  },
+  {
+    "event": "CSCTF 2025",
+    "place": 217,
+    "points": 10016,
+    "ratingPoints": 0,
+    "eventId": 2980,
+    "year": 2025
+  },
+  {
+    "event": "NexHunt CTF",
+    "place": 226,
+    "points": 600,
+    "ratingPoints": 1.726,
+    "eventId": 3037,
+    "year": 2025
+  },
+  {
+    "event": "BSides Algiers 2025",
+    "place": 237,
+    "points": 10,
+    "ratingPoints": 0.122,
+    "eventId": 2962,
+    "year": 2025
+  },
+  {
+    "event": "ASIS CTF Finals 2025",
+    "place": 250,
+    "points": 59,
+    "ratingPoints": 1.381,
+    "eventId": 2613,
+    "year": 2025
   },
   {
     "event": "PwnSec CTF 2025",
     "place": 257,
-    "points": 200.0,
-    "logo": "pwnsec-ctf-2025.png"
+    "points": 200,
+    "ratingPoints": 0.595,
+    "eventId": 2906,
+    "year": 2025
   },
   {
     "event": "AmateursCTF 2025",
     "place": 266,
-    "points": 110.0,
-    "logo": "amateursctf-2025.png"
+    "points": 110,
+    "ratingPoints": 0.821,
+    "eventId": 2844,
+    "year": 2025
   },
   {
     "event": "BuckeyeCTF 2025",
     "place": 327,
-    "points": 400.0,
-    "logo": "buckeyectf-2025.png"
+    "points": 400,
+    "ratingPoints": 2.127,
+    "eventId": 2883,
+    "year": 2025
   },
   {
     "event": "PatriotCTF 2025",
     "place": 350,
-    "points": 2150.0,
-    "logo": "patriotctf-2025.png"
+    "points": 2150,
+    "ratingPoints": 13.508,
+    "eventId": 2850,
+    "year": 2025
   },
   {
     "event": "V1t CTF 2025",
     "place": 410,
-    "points": 1060.0,
-    "logo": "v1t-ctf-2025.png"
+    "points": 1060,
+    "ratingPoints": 2.586,
+    "eventId": 2920,
+    "year": 2025
+  },
+  {
+    "event": "SECCON CTF 14 Quals",
+    "place": 679,
+    "points": 50,
+    "ratingPoints": 1.573,
+    "eventId": 2862,
+    "year": 2025
+  },
+  {
+    "event": "niteCTF 2025",
+    "place": 812,
+    "points": 50,
+    "ratingPoints": 0.325,
+    "eventId": 2851,
+    "year": 2025
   },
   {
     "event": "SunshineCTF 2025",
     "place": 918,
-    "points": 33.0,
-    "logo": "sunshinectf-2025.png"
+    "points": 33,
+    "ratingPoints": 0.274,
+    "eventId": 2863,
+    "year": 2025
   }
 ]

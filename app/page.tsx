@@ -1,6 +1,7 @@
 import { Card } from "@/components/ui/Card";
 import { JoinForm } from "@/components/ui/JoinForm";
 import ctfData from "@/data/ctf-data.json";
+import ctfTeam from "@/data/ctf-team.json";
 import { Trophy, MapPin, Users, Linkedin, ExternalLink, Target, Shield, Zap, Award, Star, TrendingUp, Calendar, Flag } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -15,11 +16,69 @@ import { KonamiEasterEgg } from "@/components/ui/KonamiEasterEgg";
 import { ScrollToTop } from "@/components/ui/ScrollToTop";
 import { CursorGlow } from "@/components/ui/CursorGlow";
 
+// The CTFtime team id, kept in one place so the link and the data cannot drift.
+const CTFTIME_URL = `https://ctftime.org/team/${ctfTeam.teamId}`;
+
+// Logos are stored per event in public/ctf-logos. The sync script writes the
+// event name, so the logo is resolved by normalising both sides to a slug and
+// matching on a prefix — that keeps the existing artwork working even when
+// CTFtime spells an event slightly differently.
+const LOGO_SLUGS = [
+  "amateursctf-2025",
+  "buckeyectf-2025",
+  "crate-ctf-2025",
+  "deadface-ctf-2025",
+  "enigmaxplore-3",
+  "glacierctf-2025",
+  "guardians-of-the-ti",
+  "haix-la-chapelle-2025",
+  "haunted-pumpkin-ctf-25",
+  "heroctf-v7",
+  "jailctf-2025",
+  "mctf-2025-junior-quals",
+  "patriotctf-2025",
+  "platypwn-2025",
+  "pointer-overflow-ctf-2025",
+  "pwnsec-ctf-2025",
+  "saarctf-2025",
+  "sknbctf-2025",
+  "sunshinectf-2025",
+  "v1t-ctf-2025",
+];
+
+function slugify(value: string): string {
+  return value
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+}
+
+function logoFor(eventName: string): string | null {
+  const slug = slugify(eventName);
+  // Exact match first, then the longest slug that the event name starts with.
+  const exact = LOGO_SLUGS.find((s) => s === slug);
+  if (exact) return `${exact}.png`;
+  const prefix = LOGO_SLUGS.filter((s) => slug.startsWith(s) || s.startsWith(slug)).sort(
+    (a, b) => b.length - a.length
+  )[0];
+  return prefix ? `${prefix}.png` : null;
+}
+
 export default function Home() {
-  // Calculate stats
+  // Calculate stats from the synced CTFtime data.
   const totalPoints = ctfData.reduce((sum, ctf) => sum + ctf.points, 0);
   const bestRank = Math.min(...ctfData.map(ctf => ctf.place));
   const topFinishes = ctfData.filter(ctf => ctf.place <= 100).length;
+
+  // The event that produced the best placement, and the one with the highest
+  // score — both read from the data instead of being hardcoded.
+  const bestEvent = ctfData.reduce((a, b) => (b.place < a.place ? b : a));
+  const highestScoreEvent = ctfData.reduce((a, b) => (b.points > a.points ? b : a));
+
+  // Seasons come newest-first from the sync script.
+  const currentSeason = ctfTeam.seasons[0];
+  const firstSeason = ctfTeam.seasons[ctfTeam.seasons.length - 1];
+  const activeSince = firstSeason ? firstSeason.year : new Date().getFullYear();
 
   return (
     <div className="container mx-auto px-4 space-y-32 pb-24">
@@ -89,7 +148,7 @@ export default function Home() {
             <Flag className="w-5 h-5" />
             View CTFs
           </Link>
-          <Link href="https://ctftime.org/team/408313" target="_blank" className="px-8 py-4 rounded-full border-2 border-purple-500/40 hover:border-purple-500 hover:bg-purple-500/10 transition-all duration-300 font-semibold flex items-center gap-2">
+          <Link href={CTFTIME_URL} target="_blank" className="px-8 py-4 rounded-full border-2 border-purple-500/40 hover:border-purple-500 hover:bg-purple-500/10 transition-all duration-300 font-semibold flex items-center gap-2">
             <ExternalLink className="w-5 h-5" />
             CTFtime Profile
           </Link>
@@ -114,6 +173,15 @@ export default function Home() {
             <AnimatedCounter end={topFinishes} className="text-3xl md:text-4xl font-black text-green-400" />
             <p className="text-sm text-muted-foreground uppercase tracking-wider">Top 100 Finishes</p>
           </div>
+          {currentSeason?.overallPlace != null && (
+            <div className="text-center">
+              <span className="text-3xl md:text-4xl font-black text-pink-400">#</span>
+              <AnimatedCounter end={currentSeason.overallPlace} className="text-3xl md:text-4xl font-black text-pink-400" />
+              <p className="text-sm text-muted-foreground uppercase tracking-wider">
+                {currentSeason.year} Overall
+              </p>
+            </div>
+          )}
         </div>
       </section>
 
@@ -223,7 +291,7 @@ export default function Home() {
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             Our <span className="text-cyan-500">Achievements</span>
           </h2>
-          <p className="text-muted-foreground text-lg">Conquering CTF challenges across the globe in 2025.</p>
+          <p className="text-muted-foreground text-lg">Conquering CTF challenges across the globe in {currentSeason?.year ?? new Date().getFullYear()}.</p>
         </div>
 
         {/* Highlighted achievements */}
@@ -234,23 +302,25 @@ export default function Home() {
               <span className="text-sm uppercase tracking-wider text-muted-foreground">Best Placement</span>
             </div>
             <p className="text-4xl font-black text-yellow-400">#{bestRank}</p>
-            <p className="text-sm text-muted-foreground mt-1">Pointer Overflow CTF</p>
+            <p className="text-sm text-muted-foreground mt-1 line-clamp-1">{bestEvent.event}</p>
           </div>
           <div className="glass-card p-6 rounded-2xl border-l-4 border-cyan-500 hover:scale-[1.02] transition-transform">
             <div className="flex items-center gap-3 mb-3">
               <TrendingUp className="w-8 h-8 text-cyan-500" />
               <span className="text-sm uppercase tracking-wider text-muted-foreground">Highest Score</span>
             </div>
-            <p className="text-4xl font-black text-cyan-400">{Math.max(...ctfData.map(c => c.points)).toLocaleString()}</p>
-            <p className="text-sm text-muted-foreground mt-1">saarCTF 2025</p>
+            <p className="text-4xl font-black text-cyan-400">{highestScoreEvent.points.toLocaleString()}</p>
+            <p className="text-sm text-muted-foreground mt-1 line-clamp-1">{highestScoreEvent.event}</p>
           </div>
           <div className="glass-card p-6 rounded-2xl border-l-4 border-purple-500 hover:scale-[1.02] transition-transform">
             <div className="flex items-center gap-3 mb-3">
               <Calendar className="w-8 h-8 text-purple-500" />
               <span className="text-sm uppercase tracking-wider text-muted-foreground">Active Since</span>
             </div>
-            <p className="text-4xl font-black text-purple-400">2025</p>
-            <p className="text-sm text-muted-foreground mt-1">And going strong!</p>
+            <p className="text-4xl font-black text-purple-400">{activeSince}</p>
+            <p className="text-sm text-muted-foreground mt-1">
+              {currentSeason?.overallPlace ? `#${currentSeason.overallPlace} overall in ${currentSeason.year}` : "And going strong!"}
+            </p>
           </div>
         </div>
 
@@ -271,6 +341,7 @@ export default function Home() {
               ];
               const gradient = gradients[index % gradients.length];
               const initials = ctf.event.split(' ').slice(0, 2).map(w => w[0]).join('').toUpperCase();
+              const logo = logoFor(ctf.event);
 
               return (
                 <Card key={index} className="group relative overflow-hidden hover:scale-[1.03] transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/10">
@@ -290,9 +361,9 @@ export default function Home() {
                   <div className="flex items-start gap-4">
                     {/* CTF Logo */}
                     <div className="relative shrink-0 w-14 h-14 rounded-xl overflow-hidden bg-white/5 shadow-lg group-hover:scale-110 transition-transform ring-1 ring-white/10">
-                      {ctf.logo ? (
+                      {logo ? (
                         <Image
-                          src={`/ctf-logos/${ctf.logo}`}
+                          src={`/ctf-logos/${logo}`}
                           alt={`${ctf.event} logo`}
                           fill
                           className="object-contain p-1"
@@ -306,7 +377,7 @@ export default function Home() {
 
                     <div className="flex-1 min-w-0 pr-8">
                       <h3 className="font-bold text-sm mb-1 line-clamp-2 group-hover:text-cyan-400 transition-colors leading-tight">{ctf.event}</h3>
-                      <p className="text-xs text-muted-foreground">2025 Season</p>
+                      <p className="text-xs text-muted-foreground">{ctf.year} Season</p>
                     </div>
                   </div>
 
