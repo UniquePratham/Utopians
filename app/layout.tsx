@@ -15,26 +15,33 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Utopians | CTF Team",
-  description: "Official website of Utopians, a CTF team from the University of Calcutta. We compete in Capture The Flag competitions worldwide.",
-  keywords: ["CTF", "Capture The Flag", "Cybersecurity", "Hacking", "Utopians", "University of Calcutta", "CTFtime"],
-  authors: [{ name: "Utopians Team" }],
+  title: "Utopians — CTF team, University of Calcutta",
+  description:
+    "Utopians is a Capture The Flag team at the University of Calcutta. 105 events played, best placement #21, 31 top-100 finishes.",
+  keywords: [
+    "CTF",
+    "Capture The Flag",
+    "cybersecurity",
+    "Utopians",
+    "University of Calcutta",
+    "CTFtime",
+  ],
+  authors: [{ name: "Utopians" }],
   openGraph: {
-    title: "Utopians | CTF Team",
-    description: "Official website of Utopians CTF team from University of Calcutta",
-    url: "https://utopians.team",
+    title: "Utopians — CTF team, University of Calcutta",
+    description:
+      "Capture The Flag team at the University of Calcutta. 105 events played, best placement #21.",
+    url: "https://utopians.vercel.app",
     siteName: "Utopians",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Utopians | CTF Team",
-    description: "Official website of Utopians CTF team from University of Calcutta",
+    title: "Utopians — CTF team, University of Calcutta",
+    description:
+      "Capture The Flag team at the University of Calcutta. 105 events played, best placement #21.",
   },
-  robots: {
-    index: true,
-    follow: true,
-  },
+  robots: { index: true, follow: true },
 };
 
 export default function RootLayout({
@@ -48,9 +55,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
       >
         <Navbar />
-        <main className="grow pt-20">
-          {children}
-        </main>
+        <main className="grow">{children}</main>
         <Footer />
       </body>
     </html>
