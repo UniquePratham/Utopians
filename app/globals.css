@@ -4,35 +4,66 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
 
-  --color-primary: #0f766e;
+  --color-primary: #0d9488;
   --color-primary-foreground: #ffffff;
-  --color-secondary: #f8fafc;
-  --color-secondary-foreground: #0f172a;
-  --color-accent: #0d9488;
-  --color-accent-foreground: #ffffff;
-  --color-muted: #f1f5f9;
-  --color-muted-foreground: #64748b;
-  --color-border: #e2e8f0;
+  --color-secondary: var(--surface-muted);
+  --color-secondary-foreground: var(--foreground);
+  --color-accent: #14b8a6;
+  --color-accent-foreground: #04211d;
+  --color-muted: var(--surface-muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-border: var(--border);
 
   --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, monospace;
+
+  --animate-rise: rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+  --animate-fade: fade 0.9s ease both;
+
+  @keyframes rise {
+    from {
+      opacity: 0;
+      transform: translateY(14px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fade {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 }
 
 :root {
-  --background: #ffffff;
-  --foreground: #0f172a;
-  --border: #e2e8f0;
+  --background: #fbfcfd;
+  --foreground: #0b1220;
+  --border: #e3e8ef;
   --surface: #ffffff;
-  --surface-muted: #f8fafc;
+  --surface-muted: #f4f7fa;
+  --muted-foreground: #5b6b7f;
+  --grid: rgba(13, 148, 136, 0.055);
+  --glow-a: rgba(13, 148, 136, 0.16);
+  --glow-b: rgba(56, 189, 248, 0.12);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0b1120;
-    --foreground: #e2e8f0;
-    --border: #1e293b;
-    --surface: #0f172a;
-    --surface-muted: #131c2e;
+    --background: #070d16;
+    --foreground: #e6edf5;
+    --border: #1b2735;
+    --surface: #0d1622;
+    --surface-muted: #111d2b;
+    --muted-foreground: #8b9cb0;
+    --grid: rgba(20, 184, 166, 0.07);
+    --glow-a: rgba(13, 148, 136, 0.22);
+    --glow-b: rgba(56, 189, 248, 0.14);
   }
 }
 
@@ -48,7 +79,9 @@ html {
   scroll-behavior: smooth;
 }
 
-/* One hairline border token, used everywhere instead of ad-hoc white/10. */
+/* --------------------------------------------------------------------------
+   Surfaces
+   -------------------------------------------------------------------------- */
 .hairline {
   border-color: var(--border);
 }
@@ -61,13 +94,81 @@ html {
   background: var(--surface-muted);
 }
 
-::selection {
-  background: rgba(13, 148, 136, 0.22);
+/* A card that lifts on hover — one shared treatment instead of per-section
+   gradients, so the page reads as one system. */
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
 }
 
-/* Tabular figures so stat columns line up. */
+.card:hover {
+  border-color: color-mix(in srgb, var(--color-primary) 35%, var(--border));
+  box-shadow: 0 8px 24px -12px rgba(2, 20, 18, 0.18);
+  transform: translateY(-2px);
+}
+
+/* --------------------------------------------------------------------------
+   Hero backdrop: a faint technical grid plus two soft colour washes. This is
+   the only decorative element on the page, and it sits behind content.
+   -------------------------------------------------------------------------- */
+.hero-grid {
+  background-image:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 40%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 40%, transparent 100%);
+}
+
+.hero-glow {
+  background:
+    radial-gradient(38rem 22rem at 18% -8%, var(--glow-a), transparent 70%),
+    radial-gradient(32rem 20rem at 88% 4%, var(--glow-b), transparent 70%);
+}
+
+/* --------------------------------------------------------------------------
+   Numbers
+   -------------------------------------------------------------------------- */
 .tnum {
   font-variant-numeric: tabular-nums;
+}
+
+/* --------------------------------------------------------------------------
+   Rank accents — a single hue ramp, not a rainbow.
+   -------------------------------------------------------------------------- */
+.rank-top {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.rank-mid {
+  color: var(--foreground);
+}
+
+.rank-low {
+  color: var(--muted-foreground);
+}
+
+/* --------------------------------------------------------------------------
+   Logo tile: CTF logos are square artwork on their own background, so they get
+   a fixed tile with a subtle ring rather than being scaled into a table cell.
+   -------------------------------------------------------------------------- */
+.logo-tile {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  background: var(--surface-muted);
+  box-shadow: inset 0 0 0 1px var(--border);
+}
+
+.logo-tile img {
+  object-fit: cover;
+}
+
+::selection {
+  background: rgba(13, 148, 136, 0.22);
 }
 
 @media (prefers-reduced-motion: reduce) {
